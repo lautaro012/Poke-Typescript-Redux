@@ -2,9 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
-## Please read:
-
 Feel free to look the files and ask me any question !
+
+Sientanse libres de hacerme cualquier consulta !
+
+LinkedIn on my Description
 
 ### `npm start`
 
