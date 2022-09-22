@@ -1,0 +1,32 @@
+.list-conteiner {  
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 1% 5% 1% 5%;
+}
+.list-conteiner table {
+    width: 100%;
+}
+
+.list-conteiner tr {
+    width: 100%;
+}
+
+.list-conteiner table td {
+    border: 2px solid rgba(128, 128, 128, 0.405);
+    width: 20%;
+    height: 54px;
+}
+
+.list-conteiner table td button {
+    border: none;
+    background-color: white;
+}
+
+.list-conteiner table td button:hover {
+    border: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2%;
+}

@@ -1,0 +1,32 @@
+.Navbar-conteiner {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 5% 1% 5%;
+}
+
+.Navbar-conteiner div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.Navbar-conteiner form {
+    padding: 4px 0px 2px 2px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.405);
+}
+
+.Navbar-conteiner form button {
+    background-color: white;
+    border: none;
+}
+.Navbar-conteiner form input {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 15px;
+}
