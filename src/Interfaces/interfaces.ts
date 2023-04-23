@@ -28,7 +28,7 @@ export interface NewPokemon {
 }
 
 export interface Pokemon extends NewPokemon {
-  id: number,
+  _id: number,
 }
 
 export interface Poke {
