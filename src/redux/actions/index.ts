@@ -16,7 +16,7 @@ type Action = {
 export const getPokemon = function (data?:string)  {
     if(!data) {
         return function(dispatch:Dispatch<Action>){
-            axios('poke-backend-production.up.railway.app/user')
+            axios('/user')
             .then(resp => {
                 dispatch({
                     type: GET_PKM,
@@ -51,7 +51,7 @@ export const getPokemon = function (data?:string)  {
 
 export const createPokemon = (input:NewPokemon) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.post('poke-backend-production.up.railway.app/user', input)
+        axios.post('/user', input)
         .then(resp => {
             dispatch({
                 type: ADD_POKEMON,
@@ -64,7 +64,7 @@ export const createPokemon = (input:NewPokemon) => {
 
 export const deletePokemon = (id:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.delete(`poke-backend-production.up.railway.app/user/${id}`)
+        axios.delete(`/user/${id}`)
         .then(resp => {
             dispatch({
                 type: PKM_REMOVED,
@@ -78,7 +78,7 @@ export const deletePokemon = (id:number) => {
 
 export const editPokemon = (input:NewPokemon, id?:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.put(`poke-backend-production.up.railway.app/user/${id}`, input)
+        axios.put(`/user/${id}`, input)
         .then(resp => {
             console.log('Modificado correctamente', resp.data)
         })
