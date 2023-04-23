@@ -16,7 +16,7 @@ type Action = {
 export const getPokemon = function (data?:string)  {
     if(!data) {
         return function(dispatch:Dispatch<Action>){
-            axios('poke-backend-production.up.railway.app/?idAuthor=1')
+            axios('poke-backend-production.up.railway.app/')
             .then(resp => {
                 dispatch({
                     type: GET_PKM,
@@ -51,7 +51,7 @@ export const getPokemon = function (data?:string)  {
 
 export const createPokemon = (input:NewPokemon) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.post('poke-backend-production.up.railway.app/?idAuthor=1', input)
+        axios.post('poke-backend-production.up.railway.app/', input)
         .then(resp => {
             dispatch({
                 type: ADD_POKEMON,
