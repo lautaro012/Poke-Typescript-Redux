@@ -16,8 +16,10 @@ type Action = {
 export const getPokemon = function (data?:string)  {
     if(!data) {
         return function(dispatch:Dispatch<Action>){
+            console.log('getpokemon')
             axios('/user')
             .then(resp => {
+                console.log(resp.data)
                 dispatch({
                     type: GET_PKM,
                     payload: resp.data
