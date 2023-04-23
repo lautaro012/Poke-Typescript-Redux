@@ -16,8 +16,7 @@ type Action = {
 export const getPokemon = function (data?:string)  {
     if(!data) {
         return function(dispatch:Dispatch<Action>){
-            console.log('getpokemon')
-            axios('/user')
+            axios('https://poke-backend-production.up.railway.app/user')
             .then(resp => {
                 console.log(resp)
                 dispatch({
