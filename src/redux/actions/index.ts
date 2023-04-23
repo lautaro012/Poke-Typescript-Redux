@@ -16,7 +16,7 @@ type Action = {
 export const getPokemon = function (data?:string)  {
     if(!data) {
         return function(dispatch:Dispatch<Action>){
-            axios('https://bp-pokemons.herokuapp.com/?idAuthor=1')
+            axios('poke-backend-production.up.railway.app/?idAuthor=1')
             .then(resp => {
                 dispatch({
                     type: GET_PKM,
@@ -28,7 +28,7 @@ export const getPokemon = function (data?:string)  {
     }
     // if(typeof data === 'number') {
     //     return function(dispatch:Dispatch<Action>){
-    //         fetch(`https://bp-pokemons.herokuapp.com/${data}`)
+    //         fetch(`poke-backend-production.up.railway.app/${data}`)
     //         .then(resp => resp.json())
     //         .then(res => {
     //             dispatch({
@@ -51,7 +51,7 @@ export const getPokemon = function (data?:string)  {
 
 export const createPokemon = (input:NewPokemon) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.post('https://bp-pokemons.herokuapp.com/?idAuthor=1', input)
+        axios.post('poke-backend-production.up.railway.app/?idAuthor=1', input)
         .then(resp => {
             dispatch({
                 type: ADD_POKEMON,
@@ -64,7 +64,7 @@ export const createPokemon = (input:NewPokemon) => {
 
 export const deletePokemon = (id:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.delete(`https://bp-pokemons.herokuapp.com/${id}`)
+        axios.delete(`poke-backend-production.up.railway.app/${id}`)
         .then(resp => {
             dispatch({
                 type: PKM_REMOVED,
@@ -78,7 +78,7 @@ export const deletePokemon = (id:number) => {
 
 export const editPokemon = (input:NewPokemon, id?:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.put(`https://bp-pokemons.herokuapp.com/${id}`, input)
+        axios.put(`poke-backend-production.up.railway.app/${id}`, input)
         .then(resp => {
             console.log('Modificado correctamente', resp.data)
         })
