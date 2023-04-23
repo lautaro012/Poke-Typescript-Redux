@@ -9,7 +9,7 @@ function App() {
   const [createPokemon, setCreatePokemon] = useState<Boolean>(false)
   const [editPokemon, setEditPokemon] = useState<Boolean>(false)
   const [formData, setFormData] = useState<Pokemon>({
-    id: 0,
+    _id: 0,
     name: 'name',
     image: 'image',
     attack: 50,
