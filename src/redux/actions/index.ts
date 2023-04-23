@@ -19,7 +19,7 @@ export const getPokemon = function (data?:string)  {
             console.log('getpokemon')
             axios('/user')
             .then(resp => {
-                console.log(resp.data)
+                console.log(resp)
                 dispatch({
                     type: GET_PKM,
                     payload: resp.data
