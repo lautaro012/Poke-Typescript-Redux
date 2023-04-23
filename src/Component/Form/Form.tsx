@@ -13,7 +13,7 @@ export default function Form({
   setPokemon,
   setEditPokemon,
 }: FormProps) {
-  let { id, name, image, attack, defense, hp, type } = formData;
+  let { _id, name, image, attack, defense, hp, type } = formData;
 
   const [input, setInput] = useState<NewPokemon>({
     name: name,
