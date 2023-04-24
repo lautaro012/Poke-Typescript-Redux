@@ -54,7 +54,7 @@ export default function Form({
     if (newPokemon) {
       return dispatch(createPokemon(input));
     }
-    dispatch(editPokemon(input, id));
+    dispatch(editPokemon(input, _id));
   };
 
   return (

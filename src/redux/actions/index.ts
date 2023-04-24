@@ -63,9 +63,9 @@ export const createPokemon = (input:NewPokemon) => {
     }
 }
 
-export const deletePokemon = (id:number) => {
+export const deletePokemon = (_id:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.delete(`https://poke-backend-production.up.railway.app/user/${id}`)
+        axios.delete(`https://poke-backend-production.up.railway.app/user/${_id}`)
         .then(resp => {
             dispatch({
                 type: PKM_REMOVED,
@@ -77,9 +77,9 @@ export const deletePokemon = (id:number) => {
     }
 }
 
-export const editPokemon = (input:NewPokemon, id?:number) => {
+export const editPokemon = (input:NewPokemon, _id?:number) => {
     return function (dispatch:Dispatch<Action>) {
-        axios.put(`https://poke-backend-production.up.railway.app/user/${id}`, input)
+        axios.put(`https://poke-backend-production.up.railway.app/user/${_id}`, input)
         .then(resp => {
             console.log('Modificado correctamente', resp.data)
         })
