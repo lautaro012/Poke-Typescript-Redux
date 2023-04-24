@@ -31,7 +31,7 @@ export default function List ({onPokemonEdit}:any) {
                     pokemons?.map((poke:Pokemon) => {
                         return (
                                 <Pokemones
-                                key={poke.id}
+                                key={poke._id}
                                 poke={poke}
                                 onPokemonEdit={onPokemonEdit}
                                 />
