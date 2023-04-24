@@ -39,7 +39,7 @@ export default function rootReducer(state = initialState, action:any) {
         }
 
         case PKM_REMOVED:
-            let deletePokemon = state.pokemons.filter(poke => poke.id !== action.payload)
+            let deletePokemon = state.pokemons.filter(poke => poke._id !== action.payload)
         return {
             ...state,
             pokemons: deletePokemon

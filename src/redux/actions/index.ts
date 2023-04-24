@@ -69,7 +69,7 @@ export const deletePokemon = (_id:number) => {
         .then(resp => {
             dispatch({
                 type: PKM_REMOVED,
-                payload: id
+                payload: _id
             })
             console.log(resp.data)
         })
